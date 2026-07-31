@@ -18,5 +18,5 @@
   - **Solution**: Used Flexbox helper classes (`d-flex flex-column min-vh-100` on body and `mt-auto` on footer)[cite: 1].
 
 ## 4. Learning Story & Completion Time
-- **Completion Time**: ~3.5 hours total[cite: 1].
+- **Completion Time**: ~3 hours total[cite: 1].
 - **Key Takeaways**: Gained hands-on experience building multi-page responsive web applications using utility-first principles combined with custom CSS enhancements[cite: 1].

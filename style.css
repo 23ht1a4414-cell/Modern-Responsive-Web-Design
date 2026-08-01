@@ -1,1 +1,108 @@
+/* Custom CSS Variables */
+:root {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --dark-bg: #0f172a;
+}
 
+/* 1. Hero Section Gradient */
+header.bg-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+}
+
+/* 2. Enhanced Card Hover Effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(99, 102, 241, 0.2) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+/* Card Icon Zoom Effect on Card Hover */
+.card:hover .bi {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+.card .bi {
+  transition: transform 0.3s ease;
+}
+
+/* 3. Button Hover Effects */
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+  border-radius: 8px !important;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+
+/* 4. Navbar Link Hover & Active Glow */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Underline Animation on Nav Hover */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 80%;
+}
+
+/* 5. Form Input Focus & Hover Highlights */
+.form-control, .form-select {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.form-control:hover, .form-select:hover {
+  border-color: var(--primary-color);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+}
+
+/* 6. Footer Styling */
+footer.bg-dark {
+  background-color: var(--dark-bg) !important;
+}
